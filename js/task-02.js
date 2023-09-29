@@ -13,8 +13,8 @@ ingredients.forEach(ingredient => {
   const ingredientsItem = document.createElement(`li`);
   ingredientsItem.textContent = ingredient;
   items.push(ingredientsItem);
-  ingredientsList.append(...items);
+ 
 });
 
 
-  
+   ingredientsList.append(...items);
