@@ -14,7 +14,7 @@ const images = [
 ];
 
 const galleryList = document.querySelector(`ul.gallery`);
-
+const gallery = [];
 images.forEach(image => {
     const li =`
     <li>
@@ -23,10 +23,10 @@ images.forEach(image => {
   
   galleryList.insertAdjacentHTML(`beforeend`, li);
 
-  console.log(li);
+  //console.log(li);
 
 });
-  
+
 galleryList.style.display = `flex`;
 galleryList.style.justifyContent = `space-between`;
 

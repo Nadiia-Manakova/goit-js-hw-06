@@ -3,14 +3,20 @@ const userInput = document.querySelector(`#validation-input`);
 userInput.addEventListener(`blur`, validationInput);
 
 function validationInput(event) {
-    const minLength = parseInt(userInput.getAttribute('data-length'));
-    if (event.currentTarget.value.length >= minLength) {
-        userInput.classList.add('valid');
-        userInput.classList.remove('invalid')
+   const minLength = parseInt(userInput.getAttribute('data-length'));
+    
+    if (event.currentTarget.value.length === minLength) {
+        updateClassEl('valid', 'invalid');
     } else {
-        userInput.classList.add('invalid');
-        userInput.classList.remove('valid');
+        updateClassEl('invalid', 'valid');
+        //userInput.classList.add('invalid');
+        //userInput.classList.remove('valid');
     }
+    //console.dir(userInput)
 
-    console.dir(userInput)
+}
+
+    function updateClassEl(a, b) {
+    userInput.classList.add(a);
+    userInput.classList.remove(b);
 }
